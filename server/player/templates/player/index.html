@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Musa</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width" name="viewport" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="https://static-cdn.jtvnw.net/jtv_user_pictures/63bd89c7-ffce-4648-8866-70e7934c8e6b-profile_image-300x300.png" />
+    <link rel="shortcut icon" type="image/png" href="https://static-cdn.jtvnw.net/jtv_user_pictures/63bd89c7-ffce-4648-8866-70e7934c8e6b-profile_image-300x300.png" />
+    <style>
+        .bee-form .bee-form-row .bee-field button {
+            font-size: inherit;
+            font-family: inherit
+        }
+        
+        .bee-row-1,
+        .bee-row-10,
+        .bee-row-11,
+        .bee-row-12,
+        .bee-row-2,
+        .bee-row-8,
+        .bee-row-9 {
+            background-position: center top;
+            background-repeat: no-repeat
+        }
+        
+        .bee-row-1,
+        .bee-row-1 .bee-row-content,
+        .bee-row-10 .bee-row-content,
+        .bee-row-11 .bee-row-content,
+        .bee-row-12,
+        .bee-row-12 .bee-row-content,
+        .bee-row-13,
+        .bee-row-13 .bee-row-content,
+        .bee-row-14,
+        .bee-row-14 .bee-row-content,
+        .bee-row-2,
+        .bee-row-2 .bee-row-content,
+        .bee-row-3,
+        .bee-row-3 .bee-row-content,
+        .bee-row-4,
+        .bee-row-4 .bee-row-content,
+        .bee-row-5,
+        .bee-row-5 .bee-row-content,
+        .bee-row-6,
+        .bee-row-6 .bee-row-content,
+        .bee-row-7,
+        .bee-row-7 .bee-row-content,
+        .bee-row-8 .bee-row-content,
+        .bee-row-9 .bee-row-content {
+            background-repeat: no-repeat
+        }
+        
+        body {
+            background-color: #322d23;
+            color: #000;
+            font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace
+        }
+        
+        a {
+            color: #f1f1e9
+        }
+        
+        * {
+            box-sizing: border-box
+        }
+        
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0
+        }
+        
+        .bee-row-content {
+            max-width: 480px;
+            margin: 0 auto;
+            display: flex
+        }
+        
+        .bee-row-content .bee-col-w4 {
+            flex-basis: 33%
+        }
+        
+        .bee-row-content .bee-col-w8 {
+            flex-basis: 67%
+        }
+        
+        .bee-row-5 .bee-col-1 .bee-block-2 div.label:not(.inline),
+        .bee-row-5 .bee-col-1 .bee-block-2 label:not(.inline),
+        .bee-row-content .bee-col-w12 {
+            flex-basis: 100%
+        }
+        
+        .bee-icon .bee-icon-label-right a {
+            text-decoration: none
+        }
+        
+        .bee-divider,
+        .bee-image {
+            overflow: auto
+        }
+        
+        .bee-divider .center,
+        .bee-image .bee-center {
+            margin: 0 auto
+        }
+        
+        .bee-row-1 .bee-col-1 .bee-block-1,
+        .bee-row-10 .bee-col-2 .bee-block-1,
+        .bee-row-11 .bee-col-2 .bee-block-1,
+        .bee-row-3 .bee-col-1 .bee-block-1,
+        .bee-row-8 .bee-col-2 .bee-block-1,
+        .bee-row-9 .bee-col-2 .bee-block-1 {
+            width: 100%
+        }
+        
+        .bee-form .bee-form-row .bee-field {
+            padding: 3px;
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            align-content: flex-start
+        }
+        
+        .bee-form .bee-form-row .bee-field input:not([type=checkbox]):not([type=radio]) {
+            flex-grow: 1;
+            font-family: inherit;
+            font-size: inherit
+        }
+        
+        .bee-form .bee-form-row .bee-field .bee-button-container {
+            flex-grow: 1
+        }
+        
+        .bee-form input[type=color] {
+            border: none;
+            height: 38px
+        }
+        
+        .bee-form input[type=color]::-webkit-color-swatch-wrapper {
+            margin: 0;
+            padding: 2px
+        }
+        
+        .bee-form input[type=color]::-webkit-color-swatch {
+            margin: 0;
+            padding: 0
+        }
+        
+        .bee-icon,
+        .bee-icon .bee-icon-image,
+        .bee-icon .bee-icon-label-right {
+            display: inline-block
+        }
+        
+        .bee-icon {
+            vertical-align: middle
+        }
+        
+        .bee-icon .bee-icon-image {
+            vertical-align: middle;
+            margin-right: -4px
+        }
+        
+        .bee-image img {
+            display: block;
+            width: 100%
+        }
+        
+        .bee-text {
+            overflow-wrap: anywhere
+        }
+        
+        @media (max-width:500px) {
+            .bee-form {
+                width: 100% !important
+            }
+            .bee-row-content:not(.no_stack) {
+                display: block
+            }
+        }
+        
+        .bee-row-1 {
+            background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/bg_section1_1.png')
+        }
+        
+        .bee-row-1 .bee-col-1 {
+            padding-bottom: 5px
+        }
+        
+        .bee-row-1 .bee-col-1 .bee-block-2 {
+            font-family: inherit;
+            font-size: 14px;
+            text-align: center
+        }
+        
+        .bee-row-2 {
+            background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/bg_header.png')
+        }
+        
+        .bee-row-10 .bee-col-1,
+        .bee-row-10 .bee-col-2,
+        .bee-row-11 .bee-col-1,
+        .bee-row-11 .bee-col-2,
+        .bee-row-14 .bee-col-1,
+        .bee-row-2 .bee-col-1,
+        .bee-row-3 .bee-col-1,
+        .bee-row-4 .bee-col-1,
+        .bee-row-5 .bee-col-1,
+        .bee-row-6 .bee-col-1,
+        .bee-row-7 .bee-col-1,
+        .bee-row-8 .bee-col-1,
+        .bee-row-8 .bee-col-2,
+        .bee-row-9 .bee-col-1,
+        .bee-row-9 .bee-col-2 {
+            padding-bottom: 5px;
+            padding-top: 5px
+        }
+        
+        .bee-row-10 .bee-col-1 .bee-block-1,
+        .bee-row-11 .bee-col-1 .bee-block-1,
+        .bee-row-12 .bee-col-1 .bee-block-1,
+        .bee-row-2 .bee-col-1 .bee-block-1,
+        .bee-row-4 .bee-col-1 .bee-block-1,
+        .bee-row-4 .bee-col-1 .bee-block-2,
+        .bee-row-4 .bee-col-1 .bee-block-3,
+        .bee-row-6 .bee-col-1 .bee-block-1,
+        .bee-row-6 .bee-col-1 .bee-block-2,
+        .bee-row-6 .bee-col-1 .bee-block-3,
+        .bee-row-7 .bee-col-1 .bee-block-2,
+        .bee-row-8 .bee-col-1 .bee-block-1,
+        .bee-row-9 .bee-col-1 .bee-block-1 {
+            padding: 10px
+        }
+        
+        .bee-row-2 .bee-col-1 .bee-block-2 {
+            text-align: center;
+            width: 100%
+        }
+        
+        .bee-row-5 .bee-col-1 .bee-block-1,
+        .bee-row-7 .bee-col-1 .bee-block-1 {
+            width: 100%;
+            text-align: center
+        }
+        
+        .bee-row-5 .bee-col-1 .bee-block-2 {
+            width: 100%;
+            font-size: 16px;
+            text-align: center;
+            padding: 10px;
+            font-family: inherit;
+            margin: 0 auto
+        }
+        
+        .bee-row-10,
+        .bee-row-11,
+        .bee-row-8,
+        .bee-row-9 {
+            background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/bg_links.png')
+        }
+        
+        .bee-row-10 .bee-col-1 .bee-block-2,
+        .bee-row-11 .bee-col-1 .bee-block-2,
+        .bee-row-8 .bee-col-1 .bee-block-2,
+        .bee-row-9 .bee-col-1 .bee-block-2 {
+            padding-left: 15px;
+            text-align: center;
+            width: 100%
+        }
+        
+        .bee-row-10 .bee-col-1 .bee-block-3,
+        .bee-row-11 .bee-col-1 .bee-block-3,
+        .bee-row-8 .bee-col-1 .bee-block-3,
+        .bee-row-9 .bee-col-1 .bee-block-3 {
+            padding: 10px 10px 10px 15px
+        }
+        
+        .bee-row-12 {
+            background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/bg_last_part.png')
+        }
+        
+        .bee-row-12 .bee-col-1 {
+            padding-top: 5px
+        }
+        
+        .bee-row-14 .bee-col-1 .bee-block-1 {
+            color: #9d9d9d;
+            font-family: inherit;
+            font-size: 15px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            text-align: center
+        }
+        
+        .bee-row-1 .bee-col-1 .bee-block-2 .bee-icon-image {
+            padding: 5px
+        }
+        
+        .bee-row-1 .bee-col-1 .bee-block-2 .bee-icon,
+        .bee-row-14 .bee-col-1 .bee-block-1 .bee-icon {
+            margin-left: 0;
+            margin-right: 0
+        }
+        
+        .bee-row-14 .bee-col-1 .bee-block-1 .bee-icon-image {
+            padding: 5px 6px 5px 5px
+        }
+        
+        .bee-row-5 .bee-col-1 .bee-block-2 div.label,
+        .bee-row-5 .bee-col-1 .bee-block-2 label {
+            color: #f1f1e9;
+            line-height: 200%;
+            text-align: left;
+            display: block
+        }
+        
+        .bee-row-5 .bee-col-1 .bee-block-2 div.label {
+            padding: 3px
+        }
+        
+        .bee-row-5 .bee-col-1 .bee-block-2 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+            background-color: #fff;
+            border-top: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-left: 1px solid transparent;
+            padding: 5px;
+            border-radius: 4px
+        }
+        
+        .bee-row-5 .bee-col-1 .bee-block-2 input:not([type=checkbox]):not([type=radio]):focus {
+            outline-color: #3aaee0
+        }
+        
+        .bee-row-5 .bee-col-1 .bee-block-2 button {
+            background-color: #3aaee0;
+            border-radius: 4px;
+            border-top: 0 solid transparent;
+            border-right: 0px solid transparent;
+            border-bottom: 0 solid transparent;
+            border-left: 0 solid transparent;
+            color: #fff;
+            line-height: 200%;
+            width: 100%;
+            padding: 5px 20px;
+            letter-spacing: normal
+        }
+        
+        .bee-row-5 .bee-col-1 .bee-block-2 .bee-button-container {
+            text-align: "center"
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bee-page-container">
+        <div class="bee-row bee-row-1">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth" src="data:image/png;base64,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"
+                            style="max-width:264px;" /></div>
+                    <div class="bee-block bee-block-2 bee-icons">
+                        <div class="bee-icon">
+                            <div class="bee-icon-image"><img alt="" height="64px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAGRCAYAAABG2MIHAAAARUlEQVRoge3JwQ0AEAAEwSMa038lniqgAAqQmH3ulDnHyqV6mwEAAAAAAAAAAAAAAAAAAPgeAAAAAAAAAAC8CS1JP26SDef4By/AjbHeAAAAAElFTkSuQmCC"
+                                    width="auto" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bee-row bee-row-2">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:15px;"></div>
+                    </div>
+                    <div class="bee-block bee-block-2 bee-heading">
+                        <h1 style="color:#f1f1e9;direction:ltr;font-family:'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;font-size:50px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:center;margin-top:0;margin-bottom:0;"><strong>Musa</strong> </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bee-row bee-row-3">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-image"><img alt="Influencer" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://blog.cdn.own3d.tv/resize=fit:crop,height:400,width:600/7xvA061T3WpJ8w7aqx8m" style="max-width:384px;" /></div>
+                </div>
+            </div>
+        </div>
+        <div class="bee-row bee-row-4">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:20px;"></div>
+                    </div>
+                    <div class="bee-block bee-block-2 bee-divider">
+                        <div class="center" style="border-top:1px solid #BBBBBB;width:100%;"></div>
+                    </div>
+                    <div class="bee-block bee-block-3 bee-divider">
+                        <div class="spacer" style="height:20px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bee-row bee-row-5">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-heading">
+                        <h1 style="color:#f1f1e9;font-size:29px;font-family:Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;line-height:120%;text-align:center;direction:ltr;font-weight:normal;letter-spacing:normal;margin-top:0;margin-bottom:0;"><strong>Lisää biisi</strong> </h1>
+                    </div>
+                    <div class="bee-block bee-block-2 bee-form">
+                        <form action="/add/" method="post">
+                            {% csrf_token %}
+                            <div class="bee-form-row">
+                                <div class="bee-field bee-field-id_qfpefb"><label for="url">Youtube URL</label><input id="url" name="url" type="text" /></div>
+                            </div>
+                            <div class="bee-form-row">
+                                <div class="bee-field bee-field-id_bcjgg3"><label for="submit"> </label>
+                                    <div class="bee-button-container"><button id="submit">Lisää jonoon</button></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% if msg %}
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-heading">
+                        <h1 style="color:#9b0b0b;font-size:18px;font-family:Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;line-height:100%;text-align:center;direction:ltr;font-weight:normal;letter-spacing:normal;margin-top:0;margin-bottom:0;"><strong>{{msg}}</strong></h1>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        {% if current %}
+        <div class="bee-row bee-row-6">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:20px;"></div>
+                    </div>
+                    <div class="bee-block bee-block-2 bee-divider">
+                        <div class="center" style="border-top:1px solid #BBBBBB;width:100%;"></div>
+                    </div>
+                    <div class="bee-block bee-block-3 bee-divider">
+                        <div class="spacer" style="height:20px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bee-row bee-row-7">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-heading">
+                        <h1 style="color:#f1f1e9;font-size:29px;font-family:Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;line-height:120%;text-align:center;direction:ltr;font-weight:normal;letter-spacing:normal;margin-top:0;margin-bottom:0;"><strong>Nyt soi</strong> </h1>
+                    </div>
+                    <div class="bee-block bee-block-2 bee-divider">
+                        <div class="spacer" style="height:20px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bee-row bee-row-8" style="filter:hue-rotate(90deg);">
+            <div class="bee-row-content no_stack">
+                <div class="bee-col bee-col-1 bee-col-w8">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:0px;"></div>
+                    </div>
+                    <div class="bee-block bee-block-2 bee-heading">
+                        <h2 style="color:#f1f1e9;direction:ltr;font-family:'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;font-size:22px;font-weight:normal;letter-spacing:normal;line-height:100%;text-align:left;margin-top:0;margin-bottom:0;"><strong>{{current.author}}</strong> </h2>
+                    </div>
+                    <div class="bee-block bee-block-3 bee-text">
+                        <div class="bee-text-content" style="font-size: 14px; line-height: 120%; color: #f1f1e9; font-family: inherit;">
+                            <p style="font-size: 14px; line-height: 16px;">{{current.title}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bee-col bee-col-2 bee-col-w4">
+                    <div class="bee-block bee-block-1 bee-image">
+                        <a href="{{current.url}}" target="_blank"><img alt="Thumbnail" class="bee-center bee-fixedwidth" src="{{current.thumbnail}}" style="max-width:128px;border-radius:20%;padding-top:7px;filter:hue-rotate(-90deg);" /></a>
+                    </div>
+                </div>
+                <div class="bee-col bee-col-3 bee-col-w4">
+                    <div class="bee-block bee-block-1 bee-image">
+                        <a href="/"><img class="bee-center bee-fixedwidth" src="" style="max-width:32px;border-radius:20%;top:50%;" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %} {% if music %}
+        <div class="bee-row bee-row-6">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:20px;"></div>
+                    </div>
+                    <div class="bee-block bee-block-2 bee-divider">
+                        <div class="center" style="border-top:1px solid #BBBBBB;width:100%;"></div>
+                    </div>
+                    <div class="bee-block bee-block-3 bee-divider">
+                        <div class="spacer" style="height:20px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bee-row bee-row-7">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-heading">
+                        <h1 style="color:#f1f1e9;font-size:29px;font-family:Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;line-height:120%;text-align:center;direction:ltr;font-weight:normal;letter-spacing:normal;margin-top:0;margin-bottom:0;"><strong>Jonossa</strong> </h1>
+                    </div>
+                    <div class="bee-block bee-block-2 bee-divider">
+                        <div class="spacer" style="height:20px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% for biisi in music %}
+        <div class="bee-row bee-row-8">
+            <div class="bee-row-content no_stack">
+                <div class="bee-col bee-col-1 bee-col-w8">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:0px;"></div>
+                    </div>
+                    <div class="bee-block bee-block-2 bee-heading">
+                        <h2 style="color:#f1f1e9;direction:ltr;font-family:'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;font-size:22px;font-weight:normal;letter-spacing:normal;line-height:100%;text-align:left;margin-top:0;margin-bottom:0;"><strong>{{biisi.author}}</strong> </h2>
+                    </div>
+                    <div class="bee-block bee-block-3 bee-text">
+                        <div class="bee-text-content" style="font-size: 14px; line-height: 120%; color: #f1f1e9; font-family: inherit;">
+                            <p style="font-size: 14px; line-height: 16px;">{{biisi.title}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bee-col bee-col-2 bee-col-w4">
+                    <div class="bee-block bee-block-1 bee-image">
+                        <a href="{{biisi.url}}" target="_blank"><img alt="Thumbnail" class="bee-center bee-fixedwidth" src="{{biisi.thumbnail}}" style="max-width:128px;border-radius:20%;padding-top:7px;" /></a>
+                    </div>
+                </div>
+                <div class="bee-col bee-col-3 bee-col-w4">
+                    <div class="bee-block bee-block-1 bee-image">
+                        {% if admin %}
+                        <form action="/delete/" method="POST">
+                            <button id="submit" name="id" type="submit" value="{{biisi.id}}" style="background:transparent;border:transparent;max-width:32px;border-radius:20%;margin-top:35%;margin-left:20%;cursor:pointer;"><img alt="Delete from queue" class="bee-center bee-fixedwidth" src="https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/close-512.png" /></button>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %} {% endif %}
+
+        <div class="bee-row bee-row-12">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:85px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bee-row bee-row-13">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="center" style="border-top:1px solid #BBBBBB;width:100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

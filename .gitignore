@@ -1,0 +1,19 @@
+musa.tar
+deploy.sh
+
+# Django 
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
+*.bak
+
+# Vscode
+.vscode/* 
+!.vscode/settings.json 
+!.vscode/tasks.json 
+!.vscode/launch.json 
+!.vscode/extensions.json 
+.history
