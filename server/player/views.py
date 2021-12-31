@@ -19,6 +19,7 @@ def is_admin(request):
         ip = x_forwarded_for.split(',')[0]
     else:
         ip = request.META.get('REMOTE_ADDR')
+    print("Admin check on IP", ip)
     return ip in admins
 
 

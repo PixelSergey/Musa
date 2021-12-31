@@ -6,7 +6,7 @@ urllib3.disable_warnings()
 TIMEOUT = 20
 
 with open("serverip.txt", "r") as f:
-    SERVU = f"http://{f.readlines()[0]}:8000"
+    SERVU = f"http://{f.readlines()[0]}"
 
 instance = vlc.Instance()
 player = instance.media_player_new()
@@ -20,7 +20,7 @@ try:
         print("Getting next song...")
         r = requests.post(SERVU + "/next/", verify=False)
         if not r.status_code == 200:
-            print("Not 200 status")
+            print(f"Invalid response: {r.status_code}\n{r.text}")
             break
         
         url = r.text
