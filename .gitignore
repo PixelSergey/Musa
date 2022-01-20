@@ -1,5 +1,5 @@
-musa.tar
-deploy.sh
+*.tar
+*.sh
 
 # Django 
 *.log

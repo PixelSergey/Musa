@@ -6,7 +6,7 @@ urllib3.disable_warnings()
 TIMEOUT = 20
 
 with open("serverip.txt", "r") as f:
-    SERVU = f"http://{f.readlines()[0]}"
+    SERVU = f"http://{f.readlines()[0].strip()}"
 
 instance = vlc.Instance()
 player = instance.media_player_new()
